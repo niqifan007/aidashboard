@@ -10,14 +10,22 @@
 
           <v-card-title>ChatGPT Next Web</v-card-title>
           <v-card-text>
-            跨平台 ChatGPT 应用，支持多模型。
+            跨平台 ChatGPT 应用，支持非GPT模型，非GPT模型的后端还没部署，可以自己部署。
           </v-card-text>
           <v-card-actions>
             <v-btn color="primary" @click="goToBlog">进入</v-btn>
             <v-spacer></v-spacer>
-            <v-btn :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'" @click="show = !show"></v-btn>
+            <v-btn :icon="show1 ? 'mdi-chevron-up' : 'mdi-chevron-down'" @click="show1 = !show1"></v-btn>
           </v-card-actions>
         </v-card>
+        <v-expand-transition>
+          <v-card v-show="show1" class="mx-auto" max-width="344">
+            <v-divider></v-divider>
+            <v-card-text>
+              没什么好说的，就是比较基础的GPT对话平台。
+            </v-card-text>
+          </v-card>
+        </v-expand-transition>
       </v-col>
 
       <v-col cols="12" md="4">
@@ -29,9 +37,17 @@
           <v-card-actions>
             <v-btn color="primary" @click="goToGitHub">进入</v-btn>
             <v-spacer></v-spacer>
-            <v-btn :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'" @click="show = !show"></v-btn>
+            <v-btn :icon="show2 ? 'mdi-chevron-up' : 'mdi-chevron-down'" @click="show2 = !show2"></v-btn>
           </v-card-actions>
         </v-card>
+        <v-expand-transition>
+          <v-card v-show="show2" class="mx-auto" max-width="344">
+            <v-divider></v-divider>
+            <v-card-text>
+              就是网页版的gpt反代，账号密码不能登陆请使用access_token登陆。
+            </v-card-text>
+          </v-card>
+        </v-expand-transition>
       </v-col>
 
       <v-col cols="12" md="4">
@@ -65,11 +81,13 @@ export default {
     return {
       // Make sure to define the "show" property in the data section
       show3: false,
+      show2: false,
+      show1: false
     };
   },
   methods: {
     goToBlog() {
-      window.location.href = 'https://gptnext.wakaplus.com';
+      window.location.href = 'https://gpt.wakaplus.com';
     },
     goToGitHub() {
       // 跳转到 GitHub 页面
@@ -84,15 +102,10 @@ export default {
 </script>
 
 <style>
-.title {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  margin-top: 50px;
-}
+
 
 body {
-  background: url('https://w.wallhaven.cc/full/7p/wallhaven-7pmgey.jpg') no-repeat center center fixed;
+  background: url('https://w.wallhaven.cc/full/7p/wallhaven-7pmg8e.png') no-repeat center center fixed;
   background-size: cover;
 }
 
@@ -107,3 +120,14 @@ body {
   background-color: white;
 }
 </style>
+
+<style scoped>
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  margin-top: 50px;
+}
+</style>
+
