@@ -22,7 +22,7 @@
           <v-card v-show="show1" class="mx-auto" max-width="344">
             <v-divider></v-divider>
             <v-card-text>
-              没什么好说的，就是比较基础的GPT对话平台。
+              ChatGPT Next Web 是一个跨平台的 ChatGPT 应用，只支持对话模式，可以自己填入自己的key。
             </v-card-text>
           </v-card>
         </v-expand-transition>
@@ -44,7 +44,7 @@
           <v-card v-show="show2" class="mx-auto" max-width="344">
             <v-divider></v-divider>
             <v-card-text>
-              就是网页版的gpt反代，账号密码不能登陆请使用access_token登陆。
+              就是网页版的gpt反向代理，可以不需要科学上网进行访问，账号密码不能登陆请使用access_token登陆。
             </v-card-text>
           </v-card>
         </v-expand-transition>
@@ -54,7 +54,7 @@
         <v-card class="mx-auto" max-width="344">
           <v-img src="https://esay.579878700.xyz//i/2023/12/17/xwv4uj.png" height="200px" cover></v-img>
 
-          <v-card-title>Lobe Chat</v-card-title>
+          <v-card-title>Lobe Chat(推荐)</v-card-title>
           <v-card-text> 更多功能的GPT，支持语音合成、多模态和可扩展的函数调用插件系统。 </v-card-text>
           <v-card-actions>
             <v-btn color="primary" @click="goToResume">进入</v-btn>
@@ -105,7 +105,7 @@ export default {
 
 
 body {
-  background: url('https://w.wallhaven.cc/full/7p/wallhaven-7pmg8e.png') no-repeat center center fixed;
+  background: url('https://w.wallhaven.cc/full/yx/wallhaven-yxwqld.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
